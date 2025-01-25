@@ -13,12 +13,12 @@ const App = () =>{
 <>
     <div>
         <h2>Articles</h2>
-        <List articles={{articleList}}/>
+        <List/>
     </div>
 
     <div>
         <h2>Add new article</h2>        
-        <Form/>
+        <Form />
     </div> 
     </>
     )

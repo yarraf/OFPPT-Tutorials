@@ -1,12 +1,17 @@
-import { LOGIN } from "../actions/types"
+import { LOGIN,LOGIN_COMPLETED,LOGIN_FAILED,LOGOUT } from "../actions/types"
 
 
-export const loginStateReducer = (state={}, action)=>{
+const loginStateReducer = (state={}, action)=>{
     switch(action.type){
-
-        case LOGIN:
-            return{};
-            default:
-                return state;
+        case LOGIN_COMPLETED:
+            return {AUTH_TOKEN: action.payload};
+        case LOGIN_FAILED:
+            return {login_failed: true};
+        case LOGOUT:
+            return {};
+        default:
+            return state;
     }
 }
+
+export default loginStateReducer;

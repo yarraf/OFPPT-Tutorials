@@ -7,7 +7,7 @@ class LoginView extends React.Component{
         this.state = {
             isLoginUserNameEmpty: false, 
             isLoginPasswordEmpty: false ,
-            login_failed :false
+            
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -79,7 +79,7 @@ class LoginView extends React.Component{
                 <p className="mt-4 text-center">Don't have an account? </p>
                 <button
                   className='btnSignUpNow mt-2 btn-block'
-                  onClick={(e) => { e.preventDefault(); this.props.handleSignUpCondition() }}
+                  // onClick={(e) => { e.preventDefault(); this.props.handleSignUpCondition() }}
                 >
                     Sign up now!
                     </button>

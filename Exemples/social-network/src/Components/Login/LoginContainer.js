@@ -9,6 +9,7 @@ class LoginContainer extends React.Component{
         this.state = {
             login_failed :false
         };
+        this.login = this.login.bind(this);
     }
 
     login(data) {
@@ -17,11 +18,21 @@ class LoginContainer extends React.Component{
 
     render(){
         return(
-            // <LoginView login={this.login} login_failed = {this.props.logindata.login_failed}/>
-            <LoginView login={this.login} login_failed = {this.state.login_failed}/>
+            <React.Fragment>
+                <LoginView login={this.login} login_failed = {this.props.logindata.login_failed}/>
+            </React.Fragment>          
         )
     }
 }
 
-export default connect(state=> ({logindata: state.logindata}))(LoginContainer)
+// const mapDispatchToProps = dispatch =>{
+//     return {
+//         dispatch : dispatch
+//     };
+// }
+
+const mapStateToProps = state=>{
+    return {logindata: state.logindata};
+}
+export default connect(mapStateToProps,null)(LoginContainer)
 

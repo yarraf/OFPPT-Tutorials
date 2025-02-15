@@ -8,7 +8,7 @@ function* Login(action){
             console.log(JSON.stringify(action));
             if(loginResponse.email === action.payload.email && loginResponse.password === action.payload.password)
             {
-                console.log('it s ok');
+                console.log('set in local Storage');
                 yield localStorage.setItem('AUTH_TOKEN', loginResponse.auth_token);
                 yield put({type: LOGIN_COMPLETED, payload:loginResponse.auth_token});
             }
@@ -21,7 +21,6 @@ function* Login(action){
     catch(error){
         console.log(error);
     }
-
 }
 
 function getDataConnexion(){

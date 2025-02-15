@@ -7,7 +7,6 @@ class LoginView extends React.Component{
         this.state = {
             isLoginUserNameEmpty: false, 
             isLoginPasswordEmpty: false ,
-            
         }
 
         this.handleChange = this.handleChange.bind(this);

@@ -24,6 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/list" element={<AnnonceByReg />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/add" element={<DiffuserAnn />} />
       <Route path="/manage" element={<AdminAnn />} />
       <Route path="/annonce/:id" element={<AnnonceDetail />} />
